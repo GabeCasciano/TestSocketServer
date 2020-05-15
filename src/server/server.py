@@ -33,8 +33,10 @@ try:
 
         data = "Server says Hello, {}, time {}".format(text, datetime.datetime.now())
 
-        if text != "/close":
-            conn.sendall(str.encode(data)) # while fail if nothing is waiting for it
+        if text == "/close":
+            run = False
+            data = "server is closing connection, bye"
+        conn.sendall(str.encode(data))
 
 except KeyboardInterrupt: # if interrupted by sys admin
     print("Closing server")
