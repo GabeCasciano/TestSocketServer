@@ -31,7 +31,7 @@ try:
 
         print("Received Data from client {}, msg: {}".format(addr, text)) # format and display
 
-        data = "Server says Hello, " + text + " time: " + datetime.datetime.now()
+        data = "Server says Hello, {}, time {}".format(text, datetime.datetime.now())
         conn.sendall(str.encode(data))
 
 except KeyboardInterrupt: # if interrupted by sys admin
