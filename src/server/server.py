@@ -22,20 +22,22 @@ sock.listen() # listen for users connection
 run = True
 
 try:
+    print("Listening for new client ...")
+    conn, addr = sock.accept()  # accept a new connection on the server
+
     while run:
-        print("Listening for new client ...")
-        conn, addr = sock.accept() # accept a new connection on the server
         data = conn.recv(2048) # receive 2048 bytes of data from client
         text = data.decode() # decode data sent from client
+
         print("Received Data from client {}, msg: {}".format(addr, text)) # format and display
 
-        data = "Server says Hello, " + text
+        data = "Server says Hello, " + text + " time: " + datetime.datetime.now()
         conn.sendall(str.encode(data))
 
-        conn.close()
 except KeyboardInterrupt: # if interrupted by sys admin
-    conn.close() # close connection to client
     print("Closing server")
+finally:
+    conn.close()
 
 sock.close() # close socket
 exit(0)
