@@ -32,7 +32,9 @@ try:
         print("Received Data from client {}, msg: {}".format(addr, text)) # format and display
 
         data = "Server says Hello, {}, time {}".format(text, datetime.datetime.now())
-        conn.sendall(str.encode(data))
+
+        if text != "/close":
+            conn.sendall(str.encode(data)) # while fail if nothing is waiting for it
 
 except KeyboardInterrupt: # if interrupted by sys admin
     print("Closing server")

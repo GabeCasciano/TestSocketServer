@@ -22,4 +22,7 @@ text = input()
 data_packet = str.encode(text)
 sock.sendall(data_packet)
 
+data_packet = sock.recv(2048)
+print("Server response: {}".format(data_packet.decode()))
+
 sock.close() # close socket connection
