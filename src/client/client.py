@@ -14,4 +14,7 @@ text = "This is gabe to server, the current time is {}".format(datetime.datetime
 data_packet = str.encode(text) # the converted data packet that will be sent
 sock.sendall(data_packet) # sending the data to the server
 
+data_packet = sock.recv(2048)
+print("Server response: {}".format(data_packet.decode()))
+
 sock.close() # close socket connection

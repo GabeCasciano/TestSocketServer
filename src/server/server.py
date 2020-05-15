@@ -19,7 +19,6 @@ print("Successfully bound to addr {} on port {}".format(HOST, PORT))
 
 sock.listen() # listen for users connection
 
-
 run = True
 
 try:
@@ -29,6 +28,10 @@ try:
         data = conn.recv(2048) # receive 2048 bytes of data from client
         text = data.decode() # decode data sent from client
         print("Received Data from client {}, msg: {}".format(addr, text)) # format and display
+
+        data = "Server says Hello, " + text
+        conn.sendall(str.encode(data))
+
         conn.close()
 except KeyboardInterrupt: # if interrupted by sys admin
     conn.close() # close connection to client
