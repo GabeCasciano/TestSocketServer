@@ -13,4 +13,3 @@ data_packet = str.encode(text) # the converted data packet that will be sent
 sock.sendall(data_packet) # sending the data to the server
 
 sock.close() # close socket connection
-
