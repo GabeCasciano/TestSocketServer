@@ -1,7 +1,7 @@
 import socket
 import datetime
 
-HOST = 'ec2-3-21-205-199.us-east-2.compute.amazonaws.com'
+HOST = ''
 PORT = 12345
 
 print("Starting program {}".format(datetime.datetime.now()))
@@ -17,7 +17,7 @@ IP_2 = sock.getsockname()[0] # Public IP of Host server
 
 print("Successfully bound to addr {} on port {}".format(HOST, PORT))
 
-sock.listen(2) # listen for users connection
+sock.listen() # listen for users connection
 
 
 run = True
