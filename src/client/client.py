@@ -25,4 +25,9 @@ sock.sendall(data_packet)
 data_packet = sock.recv(2048)
 print("Server response: {}".format(data_packet.decode()))
 
+data_packet = str.encode("/close")
+sock.sendall(data_packet)
+data_packet = sock.recv(2048)
+print("Server response: {}".format(data_packet.decode()))
+
 sock.close() # close socket connection
