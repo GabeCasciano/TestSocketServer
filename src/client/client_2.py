@@ -21,14 +21,19 @@ try:
         text = input()
 
         data_packet = str.encode(text)
-
         sock.sendall(data_packet)
+
+        if text == "/close" or text == "/exit":
+            run = False
 
         data_packet = sock.recv(2048)
         print("Received from server, {}, at: {}".format(data_packet.decode(), datetime.datetime.now()))
 
+
+
 except KeyboardInterrupt:
     print("Closing connection")
 finally:
+    sock.sendall(str.encode("/close"))
     sock.close()
 
