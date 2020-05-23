@@ -38,7 +38,7 @@ try:
         while with_client:
             data = client_sock.recv(MAX_DATA_LEN)
             data = data.decode()
-
+            print(company.toString())
             print(f"Data received from addr, {client_addr}, {data}")
 
             out = data.split(",")
