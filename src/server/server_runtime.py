@@ -108,10 +108,10 @@ try:
 
                 if data_len >= 3:
 
-                    if out[1] == 1: # Name
+                    if int(out[1]) == 1: # Name
                         complete = company.remove_employee_by_name(out[2])
 
-                    elif out[1] == 2: # ID
+                    elif int(out[1]) == 2: # ID
                         complete = company.remove_employee_by_ID(out[2])
 
                     print(f"Removed Employee: {out[2]}, {complete}, {datetime.now()}")
