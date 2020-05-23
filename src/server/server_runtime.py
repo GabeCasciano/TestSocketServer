@@ -112,7 +112,7 @@ try:
                         complete = company.remove_employee_by_name(out[2])
 
                     elif int(out[1]) == 2: # ID
-                        complete = company.remove_employee_by_ID(out[2])
+                        complete = company.remove_employee_by_ID(int(out[2]))
 
                     print(f"Removed Employee: {out[2]}, {complete}, {datetime.now()}")
 
@@ -128,11 +128,11 @@ try:
                 complete = False
 
                 if data_len >= 3:
-                    if out[1] == 1:  # Name
+                    if int(out[1]) == 1:  # Name
                         complete = company.check_in_by_name(out[2])
 
-                    elif out[1] == 2:  # ID
-                        complete = company.check_in_by_ID(out[2])
+                    elif int(out[1]) == 2:  # ID
+                        complete = company.check_in_by_ID(int(out[2]))
 
                     print(f"Check-In Employee: {out[2]}, {complete}, {datetime.now()}")
 
@@ -148,11 +148,11 @@ try:
                 complete = False
 
                 if data_len >= 3:
-                    if out[1] == 1:  # Name
+                    if int(out[1]) == 1:  # Name
                         complete = company.check_out_by_name(out[2])
 
-                    elif out[1] == 2:  # ID
-                        complete = company.check_out_by_ID(out[2])
+                    elif int(out[1]) == 2:  # ID
+                        complete = company.check_out_by_ID(int(out[2]))
 
                 data = str.encode(f"{complete},{datetime.now()}")
                 client_sock.sendall(data)
@@ -163,11 +163,11 @@ try:
                 data = []
 
                 if data_len >= 3:
-                    if out[1] == 1:  # Name
+                    if int(out[1]) == 1:  # Name
                         data = company.last_seen_by_name(out[2])
 
-                    elif out[1] == 2:  # ID
-                        data = company.last_seen_by_ID(out[2])
+                    elif int(out[1]) == 2:  # ID
+                        data = company.last_seen_by_ID(int(out[2]))
 
                 data = str.encode(f"{data[0]},{data[1]}")
                 client_sock.sendall(data)
