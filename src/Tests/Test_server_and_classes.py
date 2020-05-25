@@ -71,3 +71,13 @@ data_packet = str.encode(f"/close")
 sock.sendall(data_packet)
 data = sock.recv(1024)
 print(data.decode())
+
+sock.close()
+
+sock = socket()
+
+sock.connect((HOST, PORT))
+# Send data packet to terminate connection
+data_packet = str.encode(f"/shutdown")
+sock.sendall(data_packet)
+data = sock.recv(1024)
