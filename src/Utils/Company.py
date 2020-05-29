@@ -1,12 +1,16 @@
 from .Employee import Employee
 import sqlite3
+import os.path
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+db_path = os.path.join(BASE_DIR, "backup.db")
 
 class Company():
 
     def __init__(self, Name):
         self.employees = []
         self.Name = Name
-        self.Backup_location = "backup.db"
+        self.Backup_location = db_path
         print("New Company: {}".format(Name))
 
     def add_existing_employee(self, employee):
