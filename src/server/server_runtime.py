@@ -30,6 +30,7 @@ host_sock.bind((HOST, PORT)) # Bind host to PORT
 host_sock.listen(MAX_CLIENTS) # listen for MAX_CLIENTS amount of clients
 
 try:
+    company.read_from_file()
     while run:
         with_client = True
         print("Waiting for client ...")
@@ -175,15 +176,21 @@ try:
                 client_sock.sendall(data)
 
             elif command == "/backup":
-                pass
+                company.save_to_file()
+                data = str.encode("Loading company from db")
+                client_sock.sendall(data)
+
             elif command == "/load_backup":
-                pass
+                company.read_from_file()
+                data = str.encode("Writing company to db")
+                client_sock.sendall(data)
             else:
                 print(f"Client conn {client_addr} sent: {data}")
                 client_sock.sendall(str.encode(data))
 
 except KeyboardInterrupt:
     print("Killing server")
+    Company.save_to_file()
 
 host_sock.close()
 exit(0)

@@ -16,6 +16,12 @@ class Employee():
 
         Employee.MASTER_ID += 1
 
+    def _set_id(self, ID):
+        self.ID = ID
+
+    def _set_master_ID(self, MASTER_ID):
+        Employee.MASTER_ID = MASTER_ID
+
     def check_in(self):
         self.last_seen = datetime.datetime.now()
         self.present = True
@@ -32,3 +38,6 @@ class Employee():
 
     def toBytes(self):
         return str.encode(f"{self.Name},{self.ID},{self.Department}")
+
+    def toSQL(self):
+        return [self.ID, self.Name, self.Department, self.last_seen, self.present]

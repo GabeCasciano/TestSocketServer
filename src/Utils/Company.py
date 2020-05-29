@@ -1,10 +1,12 @@
 from .Employee import Employee
+import sqlite3
 
 class Company():
 
     def __init__(self, Name):
         self.employees = []
         self.Name = Name
+        self.Backup_location = "backup.db"
         print("New Company: {}".format(Name))
 
     def add_existing_employee(self, employee):
@@ -88,8 +90,53 @@ class Company():
 
         return String
 
+    def toSQL(self):
+        parameters = []
+        for emp in self.employees:
+            parameters.append(emp.toSQL())
+
+        return parameters
+
+    def create_db(self):
+        conn = sqlite3.connect(self.Backup_location)
+        c = conn.cursor()
+        create_table = '''CREATE TABLE EMPLOYEES (
+                                ID INT PRIMARY KEY NOT NULL,
+                                NAME TEXT NOT NULL,
+                                DEPARTMENT TEXT NOT NULL,
+                                LAST_SEEN INT NOT NULL,
+                                ON_SITE NUMERIC NOT NULL)'''
+
+        c.execute(create_table)
+        conn.commit()
+        conn.close()
+
     def save_to_file(self):
-        pass
+        conn = sqlite3.connect(self.Backup_location)
+        c = conn.cursor()
+
+        insert_emp = 'INSERT INTO EMPLOYEES VALUES (?,?,?,?,?)'
+
+        c.execute('.tables')
+        r = c.fetchone()
+        conn.commit()
+
+        c.executemany(insert_emp, self.toSQL())
+        conn.commit()
+        conn.close()
 
     def read_from_file(self):
-        pass
+        conn = sqlite3.connect(self.Backup_location)
+        c = conn.cursor()
+
+        select_emp = 'SELECT * FROM EMPLOYEES'
+
+        c.execute(select_emp)
+        list = c.fetchall();
+
+        for l in list:
+            emp = Employee(str(l[1]), str(l[2]))
+            emp._set_id(int(l[0]))
+            self.add_existing_employee(emp)
+
+        conn.close()
