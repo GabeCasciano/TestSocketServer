@@ -103,7 +103,7 @@ class Company():
     def toSQL(self):
         parameters = []
         for emp in self.employees:
-            parameters.append(emp.toSQL(), emp.saved)
+            parameters.append(emp.toSQL())
 
         return parameters
 
