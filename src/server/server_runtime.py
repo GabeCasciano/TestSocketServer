@@ -177,12 +177,12 @@ try:
 
             elif command == "/backup":
                 company.save_to_file()
-                data = str.encode("Loading company from db")
+                data = str.encode("Writing company to db")
                 client_sock.sendall(data)
 
             elif command == "/load_backup":
                 company.read_from_file()
-                data = str.encode("Writing company to db")
+                data = str.encode("Reading company from db")
                 client_sock.sendall(data)
             else:
                 print(f"Client conn {client_addr} sent: {data}")

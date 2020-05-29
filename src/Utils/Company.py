@@ -121,10 +121,6 @@ class Company():
 
         insert_emp = 'INSERT INTO EMPLOYEES VALUES (?,?,?,?,?)'
 
-        c.execute('.tables')
-        r = c.fetchone()
-        conn.commit()
-
         c.executemany(insert_emp, self.toSQL())
         conn.commit()
         conn.close()
