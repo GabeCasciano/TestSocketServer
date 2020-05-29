@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cd src/server
-python3 server_runtime.py
+cd src
+python3 server/server_runtime.py
