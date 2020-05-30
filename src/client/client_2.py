@@ -25,7 +25,7 @@ try:
         data_packet = str.encode(text)
         sock.sendall(data_packet)
 
-        if text == "/close" or text == "/exit":
+        if text == "/close":
             run = False
         elif text == '/get_company':
             DATA_LEN = 4096

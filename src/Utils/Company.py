@@ -103,7 +103,7 @@ class Company():
     def toSQL(self):
         parameters = []
         for emp in self.employees:
-            parameters.append(emp.toSQL())
+            parameters.append(emp.toSQL(), emp.saved)
 
         return parameters
 
@@ -125,6 +125,13 @@ class Company():
         conn = sqlite3.connect(self.Backup_location)
         c = conn.cursor()
 
+        try:
+            c.execute('DROP TABLE EMPLOYEES')
+        except Exception as err:
+            print("error deleting")
+
+        self.create_db()
+        
         insert_emp = 'INSERT INTO EMPLOYEES VALUES (?,?,?,?,?)' # need to check for insert or update
 
         c.executemany(insert_emp, self.toSQL())
@@ -142,6 +149,7 @@ class Company():
 
         for l in list:
             emp = Employee(str(l[1]), str(l[2]), int(l[0]))
+            emp.saved = True
             self.add_existing_employee(emp)
 
         conn.close()
