@@ -74,7 +74,7 @@ try:
                 print(f"Sending to client conn {client_addr}, {data.decode()}")
                 print(f"Closing client conn {client_addr}, {datetime.now()}")
                 print(f"Closing server {datetime.now()}")
-                
+
                 company.save_to_file()
                 break
 
