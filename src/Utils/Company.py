@@ -110,6 +110,12 @@ class Company():
     def create_db(self):
         conn = sqlite3.connect(self.Backup_location)
         c = conn.cursor()
+
+        try:
+            c.execute('DROP TABLE EMPLOYEES')
+        except Exception as err:
+            print("error deleting")
+
         create_table = '''CREATE TABLE EMPLOYEES (
                                 ID INT PRIMARY KEY NOT NULL,
                                 NAME TEXT NOT NULL,
@@ -122,13 +128,10 @@ class Company():
         conn.close()
 
     def save_to_file(self): # This is going change soon
+        self.create_db()
+
         conn = sqlite3.connect(self.Backup_location)
         c = conn.cursor()
-
-        try:
-            c.execute('DROP TABLE EMPLOYEES')
-        except Exception as err:
-            print("error deleting")
 
         self.create_db()
         
