@@ -26,6 +26,8 @@ class Company():
 
         if not flag:
             self.employees.append(employee) # Create employee if flag is not set
+            if self.MASTER_ID_NUM >= employee.ID:
+                self.MASTER_ID_NUM = employee.ID + 1
             print(f"Existing employee added: {employee.toString()}")
 
         return not flag
