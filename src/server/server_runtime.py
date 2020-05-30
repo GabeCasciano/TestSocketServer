@@ -57,9 +57,10 @@ try:
                 client_sock.sendall(data)
                 client_sock.close()
 
-
                 print(f"Sending to client conn {client_addr}, {data.decode()}")
                 print(f"Closing client conn {client_addr}, {datetime.now()}")
+
+                company.save_to_file()
                 break
 
             elif command == "/shutdown" or command == "/reboot":
@@ -73,7 +74,8 @@ try:
                 print(f"Sending to client conn {client_addr}, {data.decode()}")
                 print(f"Closing client conn {client_addr}, {datetime.now()}")
                 print(f"Closing server {datetime.now()}")
-
+                
+                company.save_to_file()
                 break
 
             elif command == "/time":
