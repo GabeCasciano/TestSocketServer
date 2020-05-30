@@ -194,7 +194,8 @@ try:
 
 except KeyboardInterrupt:
     print("Killing server")
-    Company.save_to_file()
+finally:
+    company.save_to_file()
 
 host_sock.close()
 exit(0)
