@@ -175,6 +175,9 @@ try:
                 data = str.encode(f"{data[0]},{data[1]}")
                 client_sock.sendall(data)
 
+            elif command == '/get_company':
+                data = str.encode(f"{company.toString()}")
+
             elif command == "/backup":
                 company.save_to_file()
                 data = str.encode("Writing company to db")

@@ -8,6 +8,7 @@ db_path = os.path.join(BASE_DIR, "backup.db")
 class Company():
 
     def __init__(self, Name):
+        self.MASTER_ID_NUM = 1 # Employee master ID
         self.employees = []
         self.Name = Name
         self.Backup_location = db_path
@@ -25,12 +26,15 @@ class Company():
 
         if not flag:
             self.employees.append(employee) # Create employee if flag is not set
+            print(f"Existing employee added: {employee.toString()}")
 
         return not flag
 
     def add_employee(self, Name, Department):
-        emp = Employee(Name, Department)
+        emp = Employee(Name, Department, self.MASTER_ID_NUM)
         self.employees.append(emp)
+        self.MASTER_ID_NUM += 1
+        print(f"New employee added: {emp.toString()}")
         return emp
 
     def check_in_by_name(self, Name):
@@ -115,11 +119,11 @@ class Company():
         conn.commit()
         conn.close()
 
-    def save_to_file(self):
+    def save_to_file(self): # This is going change soon
         conn = sqlite3.connect(self.Backup_location)
         c = conn.cursor()
 
-        insert_emp = 'INSERT INTO EMPLOYEES VALUES (?,?,?,?,?)'
+        insert_emp = 'INSERT INTO EMPLOYEES VALUES (?,?,?,?,?)' # need to check for insert or update
 
         c.executemany(insert_emp, self.toSQL())
         conn.commit()
@@ -132,11 +136,10 @@ class Company():
         select_emp = 'SELECT * FROM EMPLOYEES'
 
         c.execute(select_emp)
-        list = c.fetchall();
+        list = c.fetchall()
 
         for l in list:
-            emp = Employee(str(l[1]), str(l[2]))
-            emp._set_id(int(l[0]))
+            emp = Employee(str(l[1]), str(l[2]), int(l[0]))
             self.add_existing_employee(emp)
 
         conn.close()

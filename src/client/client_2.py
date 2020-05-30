@@ -20,13 +20,17 @@ try:
         print("Enter a command or message")
         text = input()
 
+        DATA_LEN = 2048
+
         data_packet = str.encode(text)
         sock.sendall(data_packet)
 
         if text == "/close" or text == "/exit":
             run = False
+        elif text == '/get_company':
+            DATA_LEN = 4096
 
-        data_packet = sock.recv(2048)
+        data_packet = sock.recv(DATA_LEN)
         print("Received from server, {}, at: {}".format(data_packet.decode(), datetime.datetime.now()))
 
 

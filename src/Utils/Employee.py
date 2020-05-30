@@ -3,24 +3,12 @@ import datetime
 
 class Employee():
 
-    MASTER_ID = 1
-
-    def __init__(self, Name, Department):
+    def __init__(self, Name, Department, ID):
         self.Name = Name
-        self.ID = Employee.MASTER_ID
+        self.ID = ID
         self.Department = Department
         self.last_seen = datetime.datetime.now() # last time employee was seen on camera
         self.present = False # if the employee is currently at work
-
-        print("New Employee: {}, {}, department: {}".format(self.Name, self.ID, self.Department))
-
-        Employee.MASTER_ID += 1
-
-    def _set_id(self, ID):
-        self.ID = ID
-
-    def _set_master_ID(self, MASTER_ID):
-        Employee.MASTER_ID = MASTER_ID
 
     def check_in(self):
         self.last_seen = datetime.datetime.now()
