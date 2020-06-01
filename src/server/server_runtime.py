@@ -190,6 +190,20 @@ try:
                 company.read_from_file()
                 data = str.encode("Reading company from db")
                 client_sock.sendall(data)
+
+            elif command == "/login":
+            # Command String: /login,<username>,<password>
+
+                if out[1] == "user" and out[2] == "password":
+                    data = str.encode("/yes")
+
+                elif out[1] == "admin" and out[2] == "admin":
+                    data = str.encode("/yes")
+                else:
+                    data = str.encode("/no")
+
+                client_sock.sendall(data)
+
             else:
                 print(f"Client conn {client_addr} sent: {data}")
                 client_sock.sendall(str.encode(data))
