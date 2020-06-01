@@ -9,7 +9,6 @@ class Employee():
         self.Department = Department
         self.last_seen = datetime.datetime.now() # last time employee was seen on camera
         self.present = False # if the employee is currently at work
-        self.saved = False
 
     def check_in(self):
         self.last_seen = datetime.datetime.now()

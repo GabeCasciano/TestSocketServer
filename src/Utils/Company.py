@@ -152,7 +152,11 @@ class Company():
 
         for l in list:
             emp = Employee(str(l[1]), str(l[2]), int(l[0]))
-            emp.saved = True
+
+            if int(l[4]) == 1:
+                emp.present = True
+                emp.last_seen = int(l[3])
+
             self.add_existing_employee(emp)
 
         conn.close()
