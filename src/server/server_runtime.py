@@ -13,7 +13,7 @@ company = Company("This company")
 
 # Networking variables and set up
 
-MAX_CLIENTS = 2 # Var for max clients on server
+MAX_CLIENTS = 3 # Var for max clients on server
 MAX_DATA_LEN = 256 # Max Data received
 
 HOST = '' # Host addr
