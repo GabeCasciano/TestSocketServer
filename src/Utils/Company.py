@@ -26,19 +26,12 @@ class Company():
 
         if not flag:
             self.employees.append(employee) # Create employee if flag is not set
-            if self.MASTER_ID_NUM >= employee.ID:
+            if self.MASTER_ID_NUM <= employee.ID:
                 self.MASTER_ID_NUM = employee.ID + 1
             print(f"Existing employee added: {employee.toString()}")
 
 
         return not flag
-
-    def update_ID(self):
-        for emp in self.employees:
-            if emp.ID >= self.MASTER_ID_NUM:
-                self.MASTER_ID_NUM == emp.ID + 1
-        print(self.MASTER_ID_NUM)
-        print(len(self.employees))
 
     def add_employee(self, Name, Department):
         emp = Employee(Name, Department, self.MASTER_ID_NUM)
@@ -167,5 +160,4 @@ class Company():
                 emp.last_seen = int(l[3])
 
             self.add_existing_employee(emp)
-        self.update_ID()
         conn.close()
