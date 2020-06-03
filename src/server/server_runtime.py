@@ -39,7 +39,7 @@ try:
         while with_client:
             data = client_sock.recv(MAX_DATA_LEN)
             data = data.decode()
-            print("\nCurrent Company: ")
+            print("Current Company: ")
             print(company.toString())
 
             print(f"Data received from addr, {client_addr}, {data}")
@@ -178,8 +178,10 @@ try:
                 client_sock.sendall(data)
 
             elif command == '/get_company':
-                data = str.encode(f"{company.toString()}")
+                comp = company.toSQL()
+                data = str.encode(f"/size,{sys.getsizeof(comp)}")
                 client_sock.sendall(data)
+                client_sock.sendall(comp)
 
             elif command == "/backup":
                 company.save_to_file()
