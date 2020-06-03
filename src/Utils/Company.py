@@ -38,7 +38,7 @@ class Company():
             if emp.ID >= self.MASTER_ID_NUM:
                 self.MASTER_ID_NUM == emp.ID + 1
         print(self.MASTER_ID_NUM)
-	print(len(self.employees))
+	    print(len(self.employees))
 
     def add_employee(self, Name, Department):
         emp = Employee(Name, Department, self.MASTER_ID_NUM)
