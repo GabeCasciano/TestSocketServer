@@ -29,7 +29,7 @@ class Company():
             if self.MASTER_ID_NUM >= employee.ID:
                 self.MASTER_ID_NUM = employee.ID + 1
             print(f"Existing employee added: {employee.toString()}")
-            self.update_ID()
+
 
         return not flag
 
@@ -37,6 +37,7 @@ class Company():
         for emp in self.employees:
             if emp.ID >= self.MASTER_ID_NUM:
                 self.MASTER_ID_NUM == emp.ID + 1
+        print(self.MASTER_ID_NUM)
 
     def add_employee(self, Name, Department):
         emp = Employee(Name, Department, self.MASTER_ID_NUM)
@@ -165,5 +166,5 @@ class Company():
                 emp.last_seen = int(l[3])
 
             self.add_existing_employee(emp)
-
+        self.update_ID()
         conn.close()
