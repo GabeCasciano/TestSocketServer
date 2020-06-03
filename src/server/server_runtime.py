@@ -181,7 +181,7 @@ try:
                 comp = company.toSQL()
                 data = str.encode(f"/size,{sys.getsizeof(comp)}")
                 client_sock.sendall(data)
-                client_sock.sendall(comp)
+                client_sock.sendall(bytes(comp))
 
             elif command == "/backup":
                 company.save_to_file()
