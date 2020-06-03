@@ -2,7 +2,7 @@ import socket
 import datetime
 import random
 
-HOST = 'ec2-3-17-62-207.us-east-2.compute.amazonaws.com' # Host server IPv4 addr or public dns
+HOST = 'ec2-3-21-205-199.us-east-2.compute.amazonaws.com' # Host server IPv4 addr or public dns
 PORT = 12345 # Port that the server is listening on
 
 sock = socket.socket()
