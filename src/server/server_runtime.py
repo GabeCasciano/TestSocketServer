@@ -179,7 +179,7 @@ try:
 
             elif command == '/get_company':
                 comp = company.toBytes()
-                data = str.encode(f"/size,{sys.getsizeof(comp[0])},{int(len(comp) - 1)}")
+                data = str.encode(f"/size,{int(len(comp) * 64)}")
                 client_sock.sendall(data)
                 for c in comp:
                     client_sock.sendall(c)
