@@ -182,7 +182,7 @@ try:
                 data = str.encode(f"/size,{sys.getsizeof(comp[0])},{int(len(comp) - 1)}")
                 client_sock.sendall(data)
                 for c in comp:
-                    client_sock.sendall(str(c))
+                    client_sock.sendall(c)
 
             elif command == "/backup":
                 company.save_to_file()
