@@ -27,5 +27,8 @@ class Employee():
     def toBytes(self):
         return str.encode(f"{self.Name},{self.ID},{self.Department}")
 
+    def toMoreBytes(self):
+        return str.encode(f"{self.Name},{self.ID},{self.Department},{self.last_seen},{self.present}")
+
     def toSQL(self):
         return [self.ID, self.Name, self.Department, self.last_seen, int(self.present)]

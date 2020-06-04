@@ -109,6 +109,13 @@ class Company():
 
         return parameters
 
+    def toBytes(self):
+        output = []
+        for emp in self.employees:
+            output.append(emp.toMoreBytes())
+
+        return output
+
     def create_db(self):
         conn = sqlite3.connect(self.Backup_location)
         c = conn.cursor()

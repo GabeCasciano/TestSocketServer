@@ -178,10 +178,11 @@ try:
                 client_sock.sendall(data)
 
             elif command == '/get_company':
-                comp = company.toSQL()
-                data = str.encode(f"/size,{sys.getsizeof(comp)}")
+                comp = company.toBytes()
+                data = str.encode(f"/size,{sys.getsizeof(comp[0])},{int(len(comp) - 1)}")
                 client_sock.sendall(data)
-                client_sock.sendall(bytes(comp))
+                for c in comp:
+                    client_sock.sendall(str(c))
 
             elif command == "/backup":
                 company.save_to_file()
