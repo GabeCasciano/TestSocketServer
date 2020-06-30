@@ -126,6 +126,8 @@ try:
 
                 print(f"Sending to client conn {client_addr}, {data.decode()}")
 
+                # You have an extra send info which is causing the recv in updateTable to break!@!!!!
+
             elif command == "/check_in":
                 # Command String: /check_in,<Specifier>,<Data>
                 # <Specifier> = 1 - Name, 2 - ID
@@ -201,6 +203,8 @@ try:
                     data = str.encode("/yes")
 
                 elif out[1] == "admin" and out[2] == "admin":
+                    data = str.encode("/yes")
+                elif out[1] == "jetson" and out[2] == "jet123":
                     data = str.encode("/yes")
                 else:
                     data = str.encode("/no")
