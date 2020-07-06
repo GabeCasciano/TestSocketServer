@@ -5,10 +5,10 @@ import tensorflow.keras
 from socket import socket
 import time
 
-HOST =  # Host server addr
+HOST = '3.21.205.199'  # Host server addr
 PORT = 12345 # Host server port
 
-HumanDetectorModel = tensorflow.keras.models.load_model('human_model.h5')
+HumanDetectorModel = tensorflow.keras.models.load_model('~/opencv/.h5')
 HumanIdentifierModel = tensorflow.keras.models.load_model('identifier_model.h5')
 
 def get_jetson_gstreamer_source(capture_width=1280, capture_height=720, display_width=640, display_height=480,
