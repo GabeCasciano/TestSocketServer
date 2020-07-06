@@ -8,8 +8,8 @@ import time
 HOST = '3.21.205.199'  # Host server addr
 PORT = 12345 # Host server port
 
-HumanDetectorModel = tensorflow.keras.models.load_model('~/opencv/.h5')
-HumanIdentifierModel = tensorflow.keras.models.load_model('identifier_model.h5')
+HumanDetector = cv2.CascadeClassifier('~/opencv/data/haarcascade_frontalface_default.xml')
+HumanIdentifierModel = tensorflow.keras.models.load_model('keras_model.h5')
 
 def get_jetson_gstreamer_source(capture_width=1280, capture_height=720, display_width=640, display_height=480,
                                 framerate=30, flip_method=2):
@@ -33,17 +33,25 @@ def preFormat(img):
 
 def waitForHuman(img):
     # non-blocking, check vs, if human return true, if not return false
-    data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
-    data[0] = img
-    predictions = HumanDetectorModel.predict(data)
-
-    if(predictions[0] > predictions[1]):
-        return True
-    else:
+    tmp = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    try:
+        rect = HumanDetector.detectMultiScale(tmp, scaleFactor=1.1, minNeighbors=5)
+    except Exception:
         return False
+
+    return True
 
 def identifyHuman(img):
     # when human in img, identify human, return the label number
+
+    tmp = tmp = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    rect = HumanDetector.detectMultiScale(tmp, scaleFactor=1.1, minNeighbors=5)
+
+    for (x,y,h,w) in rect:
+        img = img[y:y+h, x:x+w]
+
+    img = preFormat(img)
+
     data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
     data[0] = img
     predictions = HumanIdentifierModel.predict(data)
@@ -63,11 +71,15 @@ def signalServer(empNum : int):
         data = str.encode(f"/check_in,2,{empNum}")
         sock.sendall(data)
         if sock.recv(1024).decode().split(",")[0] == True:
+            sock.detach()
             return True
         else:
+            sock.detach()
             return False
     else:
+        sock.detach()
         return False
+
 
 vs = initCamera() # init the camera stream
 running = True
@@ -75,9 +87,10 @@ running = True
 while running:
 
     img = vs.read()[1] # image to find human from
-    if waitForHuman(preFormat(img)): # waiting for a human to appear
+    if waitForHuman(img): # waiting for a human to appear
         img = vs.read()[1] # image to identify human from
-        identifyHuman(preFormat(img)) # identify the appeared human
+        identified_emp = identifyHuman(img) # identify the appeared human
+        signalServer(identified_emp) # tell the server who we saw
     else:
         time.sleep(2)
 
