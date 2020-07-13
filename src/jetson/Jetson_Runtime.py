@@ -8,7 +8,7 @@ import time
 HOST = '3.21.205.199'  # Host server addr
 PORT = 12345 # Host server port
 
-HumanDetector = cv2.CascadeClassifier('~/opencv/data/haarcascade_frontalface_default.xml')
+HumanDetector = cv2.CascadeClassifier('C:\\Users\\Gabe Casciano\\Documents\\opencv\\build\\etc\\haarcascades\\haarcascade_frontalface_default.xml')
 HumanIdentifierModel = tensorflow.keras.models.load_model('keras_model.h5')
 
 def get_jetson_gstreamer_source(capture_width=1280, capture_height=720, display_width=640, display_height=480,
@@ -27,39 +27,47 @@ def get_jetson_gstreamer_source(capture_width=1280, capture_height=720, display_
 def initCamera():
     return cv2.VideoCapture(get_jetson_gstreamer_source())
 
-def preFormat(img):
-    frame = Image.fromarray(img)
+def preFormat(image):
+    frame = Image.fromarray(image)
     return (np.asarray(ImageOps.fit(frame, (224, 224), Image.ANTIALIAS)).astype(np.float32) / 127) - 1
 
-def waitForHuman(img):
+def waitForHuman(image):
     # non-blocking, check vs, if human return true, if not return false
-    tmp = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    tmp = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     try:
         rect = HumanDetector.detectMultiScale(tmp, scaleFactor=1.1, minNeighbors=5)
-    except Exception:
+        return True
+    except Exception as exc:
+        print(exc)
         return False
 
-    return True
 
-def identifyHuman(img):
+
+def identifyHuman(image):
     # when human in img, identify human, return the label number
 
-    tmp = tmp = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    tmp = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     rect = HumanDetector.detectMultiScale(tmp, scaleFactor=1.1, minNeighbors=5)
 
-    for (x,y,h,w) in rect:
-        img = img[y:y+h, x:x+w]
-
-    img = preFormat(img)
+    for (x, y, h, w) in rect:
+        tmp = image[y:y+h, x:x+w]
 
     data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
-    data[0] = img
-    predictions = HumanIdentifierModel.predict(data)
+    data[0] = preFormat(tmp)
+    predictions = HumanIdentifierModel.predict(data).tolist()
 
-    maximum = max(predictions)
-    max_index = predictions.index(maximum)
+    if predictions != None:
+        max = 0
+        indx = 0
+        counter = 0
 
-    return [maximum, max_index]
+        for p in predictions[0]:
+            if max < p:
+                max = p
+                indx = counter
+            counter += 1
+
+    return [max, indx]
 
 def signalServer(empNum : int):
     # connect to the server, send check-in command, and disconnect
@@ -81,17 +89,22 @@ def signalServer(empNum : int):
         return False
 
 
-vs = initCamera() # init the camera stream
-running = True
+if __name__ == '__main__':
+    vs = initCamera() # init the camera stream
+    running = True
 
-while running:
+    while running:
 
-    img = vs.read()[1] # image to find human from
-    if waitForHuman(img): # waiting for a human to appear
-        img = vs.read()[1] # image to identify human from
-        identified_emp = identifyHuman(img) # identify the appeared human
-        signalServer(identified_emp) # tell the server who we saw
-    else:
-        time.sleep(2)
+        img = vs.read()[1] # image to find human from
+        cv2.imshow("test", img)
+        cv2.waitKey(1)
+        if waitForHuman(img): # waiting for a human to appear
+            identified_emp = identifyHuman(img) # identify the appeared human
+            print(identified_emp)
+            signalServer(identified_emp[0]) # tell the server who we saw
+            print("looping")
+        else:
+            time.sleep(2)
+            print("resting")
 
 
