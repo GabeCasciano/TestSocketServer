@@ -8,7 +8,7 @@ import time
 HOST = '3.21.205.199'  # Host server addr
 PORT = 12345 # Host server port
 
-HumanDetector = cv2.CascadeClassifier('C:\\Users\\Gabe Casciano\\Documents\\opencv\\build\\etc\\haarcascades\\haarcascade_frontalface_default.xml')
+HumanDetector = cv2.CascadeClassifier('/home/gabe/opencv/data/haarcascades/haarcascade_frontalface_default.xml')
 HumanIdentifierModel = tensorflow.keras.models.load_model('keras_model.h5')
 
 def get_jetson_gstreamer_source(capture_width=1280, capture_height=720, display_width=640, display_height=480,
