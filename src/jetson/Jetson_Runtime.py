@@ -36,6 +36,7 @@ def waitForHuman(image):
     tmp = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     try:
         rect = HumanDetector.detectMultiScale(tmp, scaleFactor=1.1, minNeighbors=5)
+        print(rect[0])
         return True
     except Exception as exc:
         print("Wait for Human, Error:")
@@ -100,7 +101,6 @@ if __name__ == '__main__':
     while running:
 
         img = vs.read()[1] # image to find human from
-        cv2.imshow("test", img)
         cv2.waitKey(1)
         if waitForHuman(img): # waiting for a human to appear
             identified_emp = identifyHuman(img) # identify the appeared human
