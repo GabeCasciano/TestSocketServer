@@ -22,7 +22,6 @@
     <list default="true" id="2be8f0ff-5dd1-4366-b40f-98829e049c47" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jetson/Jetson_Runtime.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/jetson/Jetson_Runtime.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/server_runtime.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/server_runtime.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../LearningTeachableMachine/src/facial detection/Recognition/FacialRecognition.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../LearningTeachableMachine/src/facial detection/Recognition/FacialRecognition.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +91,8 @@
       <option name="presentableId" value="Default" />
       <updated>1594073464590</updated>
       <workItem from="1594073491853" duration="3300000" />
-      <workItem from="1594666277236" duration="736000" />
+      <workItem from="1594666277236" duration="948000" />
+      <workItem from="1594836163541" duration="279000" />
     </task>
     <servers />
   </component>

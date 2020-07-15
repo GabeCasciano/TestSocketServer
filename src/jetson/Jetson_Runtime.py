@@ -38,6 +38,7 @@ def waitForHuman(image):
         rect = HumanDetector.detectMultiScale(tmp, scaleFactor=1.1, minNeighbors=5)
         return True
     except Exception as exc:
+        print("Wait for Human, Error:")
         print(exc)
         return False
 
@@ -45,29 +46,32 @@ def waitForHuman(image):
 
 def identifyHuman(image):
     # when human in img, identify human, return the label number
+    try:
+        tmp = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        rect = HumanDetector.detectMultiScale(tmp, scaleFactor=1.1, minNeighbors=5)
 
-    tmp = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    rect = HumanDetector.detectMultiScale(tmp, scaleFactor=1.1, minNeighbors=5)
+        for (x, y, h, w) in rect:
+            tmp = image[y:y+h, x:x+w]
 
-    for (x, y, h, w) in rect:
-        tmp = image[y:y+h, x:x+w]
+        data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
+        data[0] = preFormat(tmp)
+        predictions = HumanIdentifierModel.predict(data).tolist()
 
-    data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
-    data[0] = preFormat(tmp)
-    predictions = HumanIdentifierModel.predict(data).tolist()
+        if predictions != None:
+            max = 0
+            indx = 0
+            counter = 0
 
-    if predictions != None:
-        max = 0
-        indx = 0
-        counter = 0
+            for p in predictions[0]:
+                if max < p:
+                    max = p
+                    indx = counter
+                counter += 1
 
-        for p in predictions[0]:
-            if max < p:
-                max = p
-                indx = counter
-            counter += 1
-
-    return [max, indx]
+        return [max, indx]
+    except Exception as exc:
+        print("Identify Human, Error:")
+        print(exc)
 
 def signalServer(empNum : int):
     # connect to the server, send check-in command, and disconnect
