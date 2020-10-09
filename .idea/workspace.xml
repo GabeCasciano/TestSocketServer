@@ -20,14 +20,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2be8f0ff-5dd1-4366-b40f-98829e049c47" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/V2/Jetson/Jetson_Runtime.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/V2/Server/Organization/Company.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/V2/Server/Organization/Data/customers.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/V2/Server/Organization/Data/employees.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/V2/Server/Organization/Employee.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/V2/Server/Organization/Person.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/V2/Server/Server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TestSocketServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TestSocketServer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jetson/Jetson_Runtime.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/jetson/Jetson_Runtime.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../LearningTeachableMachine/src/facial detection/Recognition/FacialRecognition.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../LearningTeachableMachine/src/facial detection/Recognition/FacialRecognition.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Login/.idea/Brandons_LoginWindow.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Login/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Login/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Login/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Login/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Login/form.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Login/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Login/main.pyproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Login/main.pyproject.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/UserWindow/.idea/Brandons_UserWindow.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/UserWindow/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/UserWindow/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/UserWindow/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/UserWindow/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/UserWindow/form.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/UserWindow/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/UserWindow/main.pyproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/UserWindow/main.pyproject.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/Test_company_and_employee.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/Test_server_and_classes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/Company.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/Employee.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/client.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/client_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/client_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jetson/Jetson_Runtime.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jetson/keras_model.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/server.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/server_runtime.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,15 +88,133 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/V2/Jetson" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Gabe Casciano\Documents\Brandon\TestSocketServer\src\V2\Jetson" />
       <recent name="C:\Users\Gabe Casciano\Documents\Brandon\TestSocketServer\src\jetson" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Gabe Casciano\Documents\Brandon\TestSocketServer\src\V2\Server\Organization\People" />
+      <recent name="C:\Users\Gabe Casciano\Documents\Brandon\TestSocketServer\src\V2\Server\Organization" />
+      <recent name="C:\Users\Gabe Casciano\Documents\Brandon\TestSocketServer\src\V2\Server\Data" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.Jetson_Runtime">
+    <configuration default="true" type="DjangoTestsConfigurationType">
+      <module name="LearningTeachableMachine" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <module name="LearningTeachableMachine" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <module name="LearningTeachableMachine" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Jetson_Runtime" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TestSocketServer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/V2/Jetson" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/V2/Jetson/Jetson_Runtime.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="LearningTeachableMachine" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Apple_Face_GUI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Apple_Face_GUI" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Apple_Face_GUI/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TestSocketServer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -74,8 +237,69 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="Python.FlaskServer">
+      <module name="LearningTeachableMachine" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="LearningTeachableMachine" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="LearningTeachableMachine" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <module name="LearningTeachableMachine" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Jetson_Runtime" />
+        <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
@@ -93,7 +317,13 @@
       <workItem from="1594073491853" duration="3300000" />
       <workItem from="1594666277236" duration="948000" />
       <workItem from="1594836163541" duration="279000" />
-      <workItem from="1594839071324" duration="336000" />
+      <workItem from="1594839071324" duration="935000" />
+      <workItem from="1594920182637" duration="57000" />
+      <workItem from="1595014013794" duration="1485000" />
+      <workItem from="1595351956648" duration="615000" />
+      <workItem from="1597896798186" duration="12211000" />
+      <workItem from="1597967662210" duration="2038000" />
+      <workItem from="1597990221392" duration="8255000" />
     </task>
     <servers />
   </component>
@@ -113,32 +343,58 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1594077249194">
+    <state x="669" y="-987" key="#main_(1)" timestamp="1597898122842">
+      <screen x="0" y="-1085" width="1920" height="1040" />
+    </state>
+    <state x="669" y="-987" key="#main_(1)/0.0.1600.860/0.-1085.1920.1040/-1920.-542.1920.1040@0.-1085.1920.1040" timestamp="1597898122842" />
+    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1597896802983">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1594077249194" />
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1594077250657">
+    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860/0.-1085.1920.1040/-1920.-542.1920.1040@0.0.1600.860" timestamp="1597896802983" />
+    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1595352954385" />
+    <state width="1877" height="143" key="GridCell.Tab.0.bottom" timestamp="1597980584399">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1594077250657" />
-    <state width="1557" height="222" key="GridCell.Tab.0.center" timestamp="1594077250657">
+    <state width="1877" height="143" key="GridCell.Tab.0.bottom/0.-1085.1920.1040/-1920.-542.1920.1040/0.0.1600.860@0.-1085.1920.1040" timestamp="1597968769878" />
+    <state width="1877" height="143" key="GridCell.Tab.0.bottom/0.0.1600.860/0.-1085.1920.1040/-1920.-542.1920.1040@0.-1085.1920.1040" timestamp="1597909947929" />
+    <state width="1877" height="143" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1597980584399" />
+    <state width="1877" height="143" key="GridCell.Tab.0.center" timestamp="1597980584398">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1594077250657" />
-    <state width="1557" height="222" key="GridCell.Tab.0.left" timestamp="1594077250657">
+    <state width="1877" height="143" key="GridCell.Tab.0.center/0.-1085.1920.1040/-1920.-542.1920.1040/0.0.1600.860@0.-1085.1920.1040" timestamp="1597968769877" />
+    <state width="1877" height="143" key="GridCell.Tab.0.center/0.0.1600.860/0.-1085.1920.1040/-1920.-542.1920.1040@0.-1085.1920.1040" timestamp="1597909947929" />
+    <state width="1877" height="143" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1597980584398" />
+    <state width="1877" height="143" key="GridCell.Tab.0.left" timestamp="1597980584398">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1594077250657" />
-    <state width="1557" height="222" key="GridCell.Tab.0.right" timestamp="1594077250657">
+    <state width="1877" height="143" key="GridCell.Tab.0.left/0.-1085.1920.1040/-1920.-542.1920.1040/0.0.1600.860@0.-1085.1920.1040" timestamp="1597968769877" />
+    <state width="1877" height="143" key="GridCell.Tab.0.left/0.0.1600.860/0.-1085.1920.1040/-1920.-542.1920.1040@0.-1085.1920.1040" timestamp="1597909947929" />
+    <state width="1877" height="143" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1597980584398" />
+    <state width="1877" height="143" key="GridCell.Tab.0.right" timestamp="1597980584398">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1594077250657" />
+    <state width="1877" height="143" key="GridCell.Tab.0.right/0.-1085.1920.1040/-1920.-542.1920.1040/0.0.1600.860@0.-1085.1920.1040" timestamp="1597968769878" />
+    <state width="1877" height="143" key="GridCell.Tab.0.right/0.0.1600.860/0.-1085.1920.1040/-1920.-542.1920.1040@0.-1085.1920.1040" timestamp="1597909947929" />
+    <state width="1877" height="143" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1597980584398" />
     <state x="352" y="136" key="SettingsEditor" timestamp="1594073724989">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="352" y="136" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1594073724989" />
+    <state x="171" y="0" width="1339" height="847" key="dock-window-1" timestamp="1598030027066">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="-1716" y="-600" width="1339" height="847" key="dock-window-1/0.0.1600.860/-1920.-600.1920.1040@0.0.1600.860" timestamp="1598000598223" />
+    <state x="171" y="0" width="1339" height="847" key="dock-window-1/0.0.1600.860@0.0.1600.860" timestamp="1598030027066" />
+    <state x="519" y="186" width="672" height="561" key="search.everywhere.popup" timestamp="1598000810447">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="519" y="186" width="672" height="561" key="search.everywhere.popup/0.0.1600.860/-1920.-600.1920.1040@0.0.1600.860" timestamp="1598000810447" />
+    <state x="623" y="-860" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/0.-1085.1920.1040/-1920.-542.1920.1040@0.-1085.1920.1040" timestamp="1597905722406" />
+    <state x="519" y="186" width="672" height="561" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1597996774013" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TestSocketServer$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1597898129722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Apple_Face_GUI" />
+    <SUITE FILE_PATH="coverage/TestSocketServer$Jetson_Runtime.coverage" NAME="Jetson_Runtime Coverage Results" MODIFIED="1597968769860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/V2/Jetson" />
     <SUITE FILE_PATH="coverage/TestSocketServer$main.coverage" NAME="main Coverage Results" MODIFIED="1594076767344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/GUI/UserWindow" />
   </component>
 </project>

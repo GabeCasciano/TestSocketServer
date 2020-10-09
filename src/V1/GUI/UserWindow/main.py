@@ -5,7 +5,6 @@ from threading import Thread
 from socket import socket
 import time
 
-
 from PySide2 import QtWidgets, QtGui
 from PySide2.QtGui import QColor
 from PySide2.QtWidgets import QApplication, QWidget

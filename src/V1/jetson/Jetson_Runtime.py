@@ -101,7 +101,7 @@ if __name__ == '__main__':
     while running:
 
         img = vs.read()[1] # image to find human from
-        cv2.waitKey(1)
+        cv2.waitKey(2)
         if waitForHuman(img): # waiting for a human to appear
             identified_emp = identifyHuman(img) # identify the appeared human
             print(identified_emp)

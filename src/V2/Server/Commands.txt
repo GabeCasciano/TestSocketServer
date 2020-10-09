@@ -1,0 +1,51 @@
+####--#### Client Commands ####--####
+
+positive ak command -> <command> == "posak"
+negative ak command -> <command> == "negak"
+
+<command>,<specifier>,<data>
+1 - Get Organization
+    <data> - 0
+    <specifier> - 0
+
+2 - Get Onsite - not in use
+    <data> - 0
+    <specifier> - 0
+
+3 - Get Person Info
+    <specifer> ->
+        1 - Name
+        2 - Number
+    <data> - name or number
+
+4 - Get Person Present
+    <specifier> ->
+        1 - Name
+        2 - Number
+    <data> - name or number
+
+####--#### Jetson Commands ####--####
+
+positive ak command -> <command> == "posak"
+negative ak command -> <command> == "negak"
+
+1 - toggle employee location
+    <specifier> ->
+        1 - Number
+    <data> - Numbers
+
+66 - kill conn
+
+####--#### Server Commands ####--####
+
+positive ak command -> <command> == "posak"
+negative ak command -> <command> == "negak"
+
+
+
+
+####--#### User Commands ####--####
+
+positive ak command -> <command> == "posak"
+negative ak command -> <command> == "negak"
+
